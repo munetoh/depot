@@ -1,6 +1,5 @@
-// $ 						Invoke jQuery
-// ('#cart')		Find #cart id
-// (remaining)	Replace div with new text
-// ; 						Close query
-
+// Dynamically update cart in sidebar (or wherever!)
 $('#cart').html("<%=j render @cart %>");
+
+// Animate product title when added to cart.
+$('#current_item').css({'background-color':'#88ff88'}).animate({'background-color':'#114411'}, 1000);
