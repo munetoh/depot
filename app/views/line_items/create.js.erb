@@ -1,3 +1,7 @@
+// Blind in or out cart.
+if ($('#cart tr').length == 1) {
+	$('#cart').show('blind', 1000); }
+
 // Dynamically update cart in sidebar (or wherever!)
 $('#cart').html("<%=j render @cart %>");
 
