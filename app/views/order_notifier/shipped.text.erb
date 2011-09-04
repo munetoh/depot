@@ -1,0 +1,9 @@
+Dear <%= @order.name %>,
+
+This is a courtesy email to let you know that your items have shipped.
+
+You should expect the following items to be delivered in the next few days:
+<%= render @order.line_items %>
+
+Thanks!
+The Bookstore Team

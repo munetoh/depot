@@ -27,4 +27,7 @@ Depot::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # mitchwd Disable email delivery in dev environment
+  config.action_mailer.delivery_method = :test
 end
