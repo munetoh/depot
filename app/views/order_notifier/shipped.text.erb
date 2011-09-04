@@ -1,3 +1,9 @@
-OrderNotifier#shipped
+Dear <%= @order.name %>,
 
-<%= @greeting %>, find me in app/views/app/views/order_notifier/shipped.text.erb
+This is a courtesy email to let you know that your items have shipped.
+
+You should expect the following items to be delivered in the next few days:
+<%= render @order.line_items %>
+
+Thanks!
+The Bookstore Team

@@ -1,3 +1,11 @@
-OrderNotifier#received
+Dear <%= @order.name %>,
 
-<%= @greeting %>, find me in app/views/app/views/order_notifier/received.text.erb
+Thank you for your recent order from the Bookstore. 
+
+You ordered the following items:
+<%= render @order.line_items %>
+
+We'll send you a separate email when your order ships.
+
+Thanks!
+The Bookstore Team
