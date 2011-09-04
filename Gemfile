@@ -5,8 +5,16 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
 
+gem 'heroku'
+
+group :production do 
+  # Use postgres for deployment to heroku
+  gem 'pg'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,3 +39,5 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+gem 'will_paginate', '~> 3.0'

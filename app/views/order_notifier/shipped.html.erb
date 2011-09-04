@@ -1,0 +1,15 @@
+<h3>Bookstore Order Shipped</h3>
+
+<p>Dear <%= @order.name %>,<br>
+   This is a courtesy email to let you know that your items have shipped.<br><br>
+
+   You should expect the following items to be delivered in the next few days:
+   </p>
+
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+  <%= render @order.line_items %>
+</table>
+
+<p>Thanks!<br>
+The Bookstore Team</p>

@@ -1,0 +1,16 @@
+<h3>Bookstore Order</h3>
+
+<p>Dear <%= @order.name %>,<br>
+   Thank you for your recent order from the Bookstore.</p>
+
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+  <%= render @order.line_items %>
+</table>
+
+<p>
+  We'll send you a separate email when your order ships.
+  <br><br>
+  Thanks!<br>
+  The Bookstore Team
+</p>
