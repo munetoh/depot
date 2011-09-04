@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    @orders = Order.paginate(page: params[:page]) # Not Order.all.paginate - not sure why?
 
     respond_to do |format|
       format.html # index.html.erb
